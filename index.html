@@ -1,0 +1,93 @@
+<?DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Can I Righteous Fire?</title>
+    
+    
+    <!-- Stylesheet include -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- JavaScript include. Could be better to include at end of body -->
+    <script src="js/calculate.js"></script>
+    
+</head>
+<body>
+    
+    <div id="container">
+        
+        <div class="innerContainer">
+            <div class="row">
+                <span class="inputName">Life</span>
+                <input type="number" id="input_life" min="0" step="1" value="1500">
+            </div>
+            <div class="row">
+                <span class="inputName">Energy Shield</span>
+                <input type="number" id="input_es" min="0" step="1" value="0">
+            </div>
+            <div class="row">
+                <span class="inputName">Fire resistance</span>
+                <input type="number" id="input_baseResistance" min="0" step="1" value="75" disabled>
+            </div>
+            <div class="row">
+                <span class="inputName">Passive resistance</span>
+                <input type="number" id="input_passiveResistance" min="0" step="1">
+            </div>
+            <div class="row">
+                <span class="inputName">Rise of the Phoenix</span>
+                <input type="checkbox" id="input_rotp">
+            </div>
+            <div class="row">
+                <span class="inputName">Purity of Fire max %</span>
+                <input type="number" id="input_purity" min="0" step="1">
+            </div>
+            <div class="row">
+                <span class="inputName">Aura effective</span>
+                <input type="number" id="input_auraEffect" min="0" step="1">
+            </div>
+            <div class="row">
+                <span class="inputName">Passive regen %</span>
+                <input type="number" id="input_passiveRegen" min="0" step="1">
+            </div>
+            <div class="row">
+                <span class="inputName">Vitality regen %</span>
+                <input type="number" id="input_vitalityRegen" min="0" step="1">
+            </div>
+        </div>
+        <div class="innerContainer">
+            <div class="row">
+                <span class="inputName">Total resistance</span>
+                <input type="number" id="input_resistance" min="0" step="1" disabled>
+            </div>
+            <div class="row">
+                <span class="inputName">Life damage</span>
+                <input type="number" id="input_lifeDamage" min="0" step="1" disabled>
+            </div>
+            <div class="row">
+                <span class="inputName">ES damage</span>
+                <input type="number" id="input_esDamage" min="0" step="1" disabled>
+            </div>
+            <div class="row">
+                <span class="inputName">Life reduced damage</span>
+                <input type="number" id="input_lifeReducedDamage" min="0" step="1" disabled>
+            </div>
+            <div class="row">
+                <span class="inputName">ES reduced damage</span>
+                <input type="number" id="input_esReducedDamage" min="0" step="1" disabled>
+            </div>
+            <div class="row">
+                <span class="inputName">Regen required</span>
+                <input type="number" id="input_regenRequired" min="0" step="1" disabled>
+            </div>
+            <div class="row">
+                <span class="inputName">Life regen required</span>
+                <input type="number" id="input_lifeRequired" min="0" step="1" disabled>
+            </div>
+            <div class="row">
+                <span class="inputName">ES regen required</span>
+                <input type="number" id="input_esRequired" min="0" step="1" disabled>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
