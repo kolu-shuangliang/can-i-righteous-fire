@@ -1,0 +1,33 @@
+{
+  "name": "can-i-righteous-fire",
+  "description": "Tool for path of exile. Check if you can sustain Righteous Fire.",
+  "version": "0.0.0",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-sass": "^2.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kolu-shuangliang/can-i-righteous-fire.git"
+  },
+  "keywords": [
+    "path",
+    "of",
+    "exile",
+    "righteous",
+    "fire",
+    "calculator"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kolu-shuangliang/can-i-righteous-fire/issues"
+  },
+  "homepage": "https://github.com/kolu-shuangliang/can-i-righteous-fire#readme"
+}
