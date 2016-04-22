@@ -7,50 +7,47 @@
     
     <!-- Stylesheet include -->
     <link rel="stylesheet" href="css/main.css">
-    <!-- JavaScript include. Could be better to include at end of body -->
-    <script src="js/calculate.js"></script>
     
 </head>
 <body>
     
     <div id="container">
-        
         <div class="innerContainer">
             <div class="row">
                 <span class="inputName">Life</span>
-                <input type="number" id="input_life" min="0" step="1" value="1500">
+                <input class="cirf-input" type="number" id="input_life" min="0" step="1" name="life">
             </div>
             <div class="row">
                 <span class="inputName">Energy Shield</span>
-                <input type="number" id="input_es" min="0" step="1" value="0">
+                <input class="cirf-input" type="number" min="0" step="1" name="es">
             </div>
             <div class="row">
                 <span class="inputName">Fire resistance</span>
-                <input type="number" id="input_baseResistance" min="0" step="1" value="75" disabled>
+                <input class="cirf-input" type="number" value="75" name="baseRes" disabled>
             </div>
             <div class="row">
                 <span class="inputName">Passive resistance</span>
-                <input type="number" id="input_passiveResistance" min="0" step="1">
+                <input class="cirf-input" type="number" min="0" step="1" name="passiveRes">
             </div>
             <div class="row">
                 <span class="inputName">Rise of the Phoenix</span>
-                <input type="checkbox" id="input_rotp">
+                <input class="cirf-input" type="checkbox" name="rotp">
             </div>
             <div class="row">
                 <span class="inputName">Purity of Fire max %</span>
-                <input type="number" id="input_purity" min="0" step="1">
+                <input class="cirf-input" type="number" min="0" step="1" name="purity">
             </div>
             <div class="row">
                 <span class="inputName">Aura effective</span>
-                <input type="number" id="input_auraEffect" min="0" step="1">
+                <input class="cirf-input" type="number" min="0" step="1" name="aura">
             </div>
             <div class="row">
                 <span class="inputName">Passive regen %</span>
-                <input type="number" id="input_passiveRegen" min="0" step="1">
+                <input class="cirf-input" type="number" min="0" step="1" name="regen">
             </div>
             <div class="row">
                 <span class="inputName">Vitality regen %</span>
-                <input type="number" id="input_vitalityRegen" min="0" step="1">
+                <input class="cirf-input" type="number" min="0" step="1" name="vitality">
             </div>
         </div>
         <div class="innerContainer">
@@ -86,8 +83,10 @@
                 <span class="inputName">ES regen required</span>
                 <input type="number" id="input_esRequired" min="0" step="1" disabled>
             </div>
+            <div id="result" class="row">Nop!</div>
         </div>
     </div>
     
+    <script src="js/eventlistener.js"></script>
 </body>
 </html>

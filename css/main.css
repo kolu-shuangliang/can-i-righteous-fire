@@ -9,6 +9,12 @@
     width: 500px;
     float: left; }
 
+#result {
+  background-color: red;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center; }
+
 .row {
   width: 100%;
   min-height: 30px;
