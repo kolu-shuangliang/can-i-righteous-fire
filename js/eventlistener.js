@@ -50,26 +50,60 @@ function calculateResult(){
     
     // TODO CALCS
     // lifeDamage
+    var lifeDamage = vars.life * 0.9;
+    document.getElementById( 'lifeDamage' ).value = lifeDamage;
     
     // TODO CALCS
     // esDamage
+    var esDamage = vars.es * 0.7;
+    document.getElementById( 'esDamage' ).value = esDamage;
     
     // TODO CALCS
-    // lifeReducedDamage
+    // lifeDamageReduced
+    var lifeDamageReduced = lifeDamage * ( ( 100 - resistance ) / 100 );
+    document.getElementById( 'lifeDamageReduced' ).value = lifeDamageReduced;
     
     // TODO CALCS
-    // esReducedDamage
+    // esDamageReduced
+    var esDamageReduced = esDamage * ( ( 100 - resistance ) / 100 );
+    document.getElementById( 'esDamageReduced' ).value = esDamageReduced;
     
     // TODO CALCS
-    // regenRequired
+    // totalDamage
+    var totalDamage = esDamageReduced + lifeDamageReduced;
+    document.getElementById( 'totalDamage' ).value = totalDamage;
     
     // TODO CALCS
-    // lifeRequired
+    // lifeRegenRequired
+    if( vars.life != 0 ){
+        var lifeRegenRequired = totalDamage / vars.life * 100;
+        document.getElementById( 'lifeRegenRequired' ).value = lifeRegenRequired;
+    }
     
     // TODO CALCS
-    // esRequired
-    
+    // esRegenRequired
+    if( vars.es != 0 ){
+        var esRegenRequired = totalDamage / vars.es * 100;
+        document.getElementById( 'esRegenRequired' ).value = esRegenRequired;
+    }
     // TODO CALCS
     // result
+    // Floor to 2 decimal places. Which is any / 100 is outside
+    var totalRegen = vars.regen + vars.vitality + ( Math.floor( vars.vitality * vars.aura ) / 100 );
     
+    if( totalRegen >= lifeRegenRequired){
+        var resultElement = document.getElementById( 'result' );
+        resultElement.innerHTML =  'Life [ ' + ( totalRegen - lifeRegenRequired ) + ' ] YES!';
+        resultElement.style.backgroundColor = 'green';   
+    }
+    else if( totalRegen >= esRegenRequired ){
+        var resultElement = document.getElementById( 'result' );
+        resultElement.innerHTML = 'ES [ ' + ( totalRegen - esRegenRequired ) + ' ] YES!';
+        resultElement.style.backgroundColor = 'green';   
+    }
+    else{
+        var resultElement = document.getElementById( 'result' );
+        resultElement.innerHTML = 'NOP!';
+        resultElement.style.backgroundColor = 'red';   
+    }
 }
